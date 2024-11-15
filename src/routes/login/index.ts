@@ -1,9 +1,8 @@
 import express from "express";
 import { responseInstance } from "./responseInstance";
-import profile from "../../profile";
 
 const router = express.Router();
 
-router.post("/user", responseInstance);
+router.use("/login", responseInstance);
 
 export default router;

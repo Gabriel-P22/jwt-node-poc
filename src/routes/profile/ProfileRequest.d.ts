@@ -1,0 +1,3 @@
+interface ProfileRequest {
+   authorization: string;
+}

@@ -3,7 +3,7 @@ import { userRepository } from "../../../repositories/userRepository";
 import { BadRequestError } from "../../../helpers/apiErrors";
 import bcrypt from "bcrypt";
 
-export const createUser: genericMiddleware<customerRequest> = async (req, res) => {
+export const responseInstance: genericMiddleware<userRequest> = async (req, res) => {
     const { name, email, password } = req.body;
 
         const userExists = await userRepository.findOneBy({email});

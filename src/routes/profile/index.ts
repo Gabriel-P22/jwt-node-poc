@@ -1,9 +1,9 @@
 import express from "express";
 import { responseInstance } from "./responseInstance";
-import profile from "../../profile";
+import { authMiddleware } from "../../middlewares/auth";
 
 const router = express.Router();
 
-router.post("/user", responseInstance);
+router.get("/profile", authMiddleware, responseInstance);
 
 export default router;
