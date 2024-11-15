@@ -1,11 +1,8 @@
-import { RequestHandler, Router } from "express";
-import { UserController } from "../controllers/UserController";
+import { Router } from "express";
+import create from "./create";
 
 const routes = Router();
 
-
-routes.post("/create", (req, res) => {
-    new UserController().create(req, res);
-});
+routes.use("/", create)
 
 export default routes;
