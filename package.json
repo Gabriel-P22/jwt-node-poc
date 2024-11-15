@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "nodemon --exec ts-node ./src/index.ts",
     "migration:generate": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./src/migrations/default",
-		"migration:run": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:run",
+    "migration:run": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.0",
     "nodemon": "^3.1.7",
@@ -19,8 +20,10 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "express-async-errors": "^3.1.1",
     "pg": "^8.13.1",
     "reflect-metadata": "^0.2.2",
     "typeorm": "^0.3.20",
