@@ -23,7 +23,7 @@ export const responseInstance: genericMiddleware<userRequest> = async (req, res)
 
     await userRepository.save(newUser);
 
-    const { password: _, ...user} = newUser;
+    const { password: _, ...user } = newUser;
 
     return res.status(201).json({ user });
 }

@@ -13,7 +13,7 @@ export const authMiddleware = async (req: Request, res: Response, next: NextFunc
 
     const token = authorization.split(" ")[1];
 
-    const jwtPass = process.env.JWT_PASS as string;
+    const jwtPass = process.env.JWT_PASS;
 
     const { id } = jwt.verify(token, jwtPass) as JwtPayload;
 
