@@ -33,5 +33,5 @@ export const responseInstance: genericMiddleware<loginRequest> = async (req, res
     return res.json({
         user: userLogin,
         token
-    })
+    });
 } 

@@ -1,9 +1,9 @@
 import "express-async-errors";
 import { NextFunction, Request, Response } from 'express'
-import { ApiError } from '../../helpers/apiErrors'
+import { ApiError } from "../../helpers/apiErrors";
 
 export const errorMiddleware = (
-	error: any,
+	error: ApiError,
 	req: Request,
 	res: Response,
 	next: NextFunction

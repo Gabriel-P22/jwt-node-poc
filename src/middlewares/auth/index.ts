@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import { UnauthorizedError } from "../../helpers/apiErrors";
+import { userRepository } from "../../repositories/userRepository";
 
 import jwt from "jsonwebtoken";
-import { userRepository } from "../../repositories/userRepository";
 
 export const authMiddleware = async (req: Request, res: Response, next: NextFunction) => {
     const authorization = req.header('authorization');

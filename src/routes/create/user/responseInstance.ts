@@ -1,6 +1,7 @@
 import { genericMiddleware } from "@type/genericMiddleware";
 import { userRepository } from "../../../repositories/userRepository";
 import { BadRequestError } from "../../../helpers/apiErrors";
+
 import bcrypt from "bcrypt";
 
 export const responseInstance: genericMiddleware<userRequest> = async (req, res) => {
